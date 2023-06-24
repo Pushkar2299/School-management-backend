@@ -16,6 +16,4 @@ public class StudentVO {
 
     private String caste;
     private String category;
-
-    private Boolean isActive = true;
 }

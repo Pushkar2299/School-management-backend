@@ -54,3 +54,76 @@ databaseChangeLog:
             constraintName: pk_user
             schemaName: school
             tableName: user
+  - changeSet:
+      id: create_student_table
+      author: pushkar_kumar
+      changes:
+        - createTable:
+            tableName: student
+            schemaName: school
+            columns:
+              - column:
+                  name: id
+                  type: int(11)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(64)
+              - column:
+                  name: father_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: mother_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dob
+                  type: date
+              - column:
+                  name: address
+                  type: varchar(64)
+              - column:
+                  name: gender
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category
+                  type: varchar(64)
+              - column:
+                  name: caste
+                  type: varchar(64)
+
+              - column:
+                  name: contact_number
+                  type: varchar(16)
+              - column:
+                  name: is_active
+                  type: boolean
+                  defaultValueComputed: true
+              - column:
+                  name: created_at
+                  type: DATETIME
+                  defaultValueComputed: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: DATETIME
+                  defaultValueComputed: now()
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            columnNames: id
+            constraintName: pk_user
+            schemaName: school
+            tableName: student

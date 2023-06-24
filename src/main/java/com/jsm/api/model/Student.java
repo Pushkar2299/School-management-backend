@@ -5,6 +5,7 @@ import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -22,7 +23,7 @@ public class Student {
     private String motherName;
     private String address;
 
-    private String dob;
+    private LocalDate dob;
     private String gender;
     private String contactNumber;
 
