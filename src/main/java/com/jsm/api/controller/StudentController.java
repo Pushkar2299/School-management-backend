@@ -16,7 +16,7 @@ import java.util.Map;
 public class StudentController {
 
     @Autowired
-    StudentService studentService;
+    private StudentService studentService;
 
     @PostMapping
     public ResponseEntity<Map<String, Object>> addNewStudent(@RequestBody Student request) {
